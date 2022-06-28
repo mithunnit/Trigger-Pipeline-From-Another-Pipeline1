@@ -1,11 +1,28 @@
-name: azure-pipeline1.yml
-
 trigger:
 - main
 
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo This Pipeline runs first!
+jobs:
+  - job: job1
+    steps:
+      - script: echo Hello, $HOSTNAME
+  
+  - job: job2
+    steps:
+      - script: echo Hello, $HOSTNAME
+    
+  - job: job3
+    steps:
+      - script: echo Hello, $HOSTNAME
+  
+  - job: job4
+    steps:
+      - script: echo Hello, $HOSTNAME
+
+  - job: job5
+    steps:
+      - script: echo Hello, $HOSTNAME 
+
 
