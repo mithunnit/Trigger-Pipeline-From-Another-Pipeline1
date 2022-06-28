@@ -1,0 +1,16 @@
+trigger:
+- none
+
+resources:
+  pipelines:
+    - pipeline: previous-pipeline-trigger
+      source: mithunnit.Trigger-Pipeline-From-Another-Pipeline1
+      trigger: true
+      
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    echo This pipeline was set to be triggered after first pipeline completes.
+    
