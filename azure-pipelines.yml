@@ -1,0 +1,11 @@
+name: azure-pipeline1.yml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo This Pipeline runs first!
+
